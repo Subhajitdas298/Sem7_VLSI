@@ -1,0 +1,8 @@
+# All
+*
+
+# Except
+!*/
+!.gitignore
+!*.jpeg
+!*.vhd

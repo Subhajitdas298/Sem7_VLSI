@@ -38,17 +38,17 @@ entity FREQ_DIV_6 is
 end FREQ_DIV_6;
 
 architecture Behavioral of FREQ_DIV_6 is
-signal count : unsigned(2 downto 0) := "000";
 begin
 	
 	process(clk)
+	variable count : unsigned(2 downto 0) := "000";
 	begin
 		if(rising_edge(clk)) then
-			count <= count + 1;
-			if(count = "011") then
+			count := count + 1;
+			if(count = "100") then
 				o <= '1';
-			elsif(count = "110") then
-				count <= "001";
+			elsif(count = "111") then
+				count := "001";
 				o <= '0';
 			end if;
 		end if;

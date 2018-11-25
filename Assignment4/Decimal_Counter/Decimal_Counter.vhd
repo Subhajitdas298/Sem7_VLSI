@@ -39,14 +39,17 @@ end Decimal_Counter;
 
 architecture Behavioral of Decimal_Counter is
 
-signal count : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-
 begin
 
 	process(clk)
+	variable count : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 	begin
 		if(clk'event and clk='1') then
-			count <= count + 1;
+			if(count="1001") then
+				count := "0000";
+			else
+				count := (count + 1);
+			end if;
 			digit <= count;
 		end if;
 	end process;

@@ -60,10 +60,6 @@ ARCHITECTURE behavior OF COMP_8_TB IS
    signal x1 : std_logic;
    signal x2 : std_logic;
    signal x3 : std_logic;
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
- 
-   constant wait_period : time := 10 ns;
  
 BEGIN
  
